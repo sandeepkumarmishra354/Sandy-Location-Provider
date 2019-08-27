@@ -1,5 +1,9 @@
 # Sandy-Location-Provider
 
+A location provider that helps you to get the device current location.
+You do not need to add those location permissions anymore in your manifest (bcz it adds those permission in manifest for you already).
+
+It automatically prompts the user for location permission and shows a dialog to enable the GPS (if it not enabled)
 
 # How to
 

@@ -24,7 +24,34 @@ Add the dependency
 # Now get location easily
 
 initialize location provider
-````[java]
+````
 private SandyLocationProvider locationProvider = new SandyLocationProvider(this);
+````
+add location listener
+````
+locationProvider.setLocationListener(new SandyLocationListener() {
+            @Override
+            public void onSuccess(Location location) {
+                //do whatever you want
+            }
+            @Override
+            public void onFail(int status) {
+                if(status == SandyLocationProvider.GPS_NOT_ENABLED) {
+			//you did not enabled the gps
+		}
+		if(status == SandyLocationProvider.SECURITY_EXCEPTION) {
+			//some security exception thrown
+		}
+		if(status == SandyLocationProvider.PERMISSION_DENIED) {
+			//user denied the location permission
+		}
+		if(status == SandyLocationProvider.GPS_ERROR) {
+			//gps error (very rare error)
+		}
+		if(status == SandyLocationProvider.CHANGE_UNAVAILABLE) {
+			//gps error (very rare error)
+		}
+            }
+        });
 ````
 

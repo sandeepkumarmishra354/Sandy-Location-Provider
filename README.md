@@ -67,4 +67,7 @@ in your activity simply override these methods (most important)
         locationProvider.onActivityResult(requestCode,resultCode,data);
     }
 ````
+# Last Step
 
+just call that function
+``locationProvider.getLocation();``

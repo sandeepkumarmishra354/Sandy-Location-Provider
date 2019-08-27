@@ -1,3 +1,5 @@
+apply plugin: 'maven'
+group = 'com.github.sandeepkumarmishra354'
 apply plugin: 'com.android.library'
 
 android {

@@ -20,3 +20,11 @@ Add the dependency
 	}
 
 ````
+
+# Now get location easily
+
+initialize location provider
+````[java]
+private SandyLocationProvider locationProvider = new SandyLocationProvider(this);
+````
+

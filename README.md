@@ -54,4 +54,17 @@ locationProvider.setLocationListener(new SandyLocationListener() {
             }
         });
 ````
+in your activity simply override these methods (most important)
+````
+    @Override
+    public void onRequestPermissionsResult(int rqc, @NonNull String[] perms, @NonNull int[] grs) {
+        super.onRequestPermissionsResult(rqc, perms, grs);
+        locationProvider.onRequestPermissionsResult(rqc,perms,grs);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode,resultCode,data);
+        locationProvider.onActivityResult(requestCode,resultCode,data);
+    }
+````
 
